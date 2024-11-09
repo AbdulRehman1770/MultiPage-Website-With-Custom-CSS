@@ -1,0 +1,391 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  font-family: Arial, sans-serif;
+  background-color: #f5f5f5;
+}
+
+/* Container for full-screen layout */
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  max-width: 100vw; /* Ensure container doesn't overflow */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+/* Header Section */
+.header {
+  text-align: center;
+  background-color: #1a237e;
+  padding: 40px 0;
+  color: white;
+}
+
+.header h1 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.header p {
+  margin-top: 16px;
+  font-size: 1.125rem;
+}
+
+/* Navigation Bar */
+.nav {
+  text-align: center;
+  padding: 16px 0;
+  background-color: #e0e0e0;
+}
+
+.nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  color: #1a237e;
+}
+
+/* Expertise Section */
+.expertise-section {
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.expertise-section h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #1a237e;
+  margin-bottom: 24px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%; /* Full width */
+  overflow-x: hidden; /* Prevent overflow in grid */
+}
+
+@media (min-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.service-card {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  border-radius: 8px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  max-width: 100%; /* Ensure cards don't overflow */
+}
+
+.service-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.service-card h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #009688;
+  margin-bottom: 16px;
+}
+
+.service-card p {
+  color: #757575;
+}
+
+/* Why Choose Us Section */
+.why-choose-us {
+  padding: 80px 24px;
+  background-color: #f5f5f5;
+  text-align: center;
+}
+
+.why-choose-us h2 {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #1a237e;
+  margin-bottom: 24px;
+}
+
+.why-choose-us p {
+  font-size: 1.125rem;
+  color: #424242;
+  max-width: 560px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+
+/* General container */
+.about-container {
+  min-height: 100vh;
+  background-color: #fafafa;
+}
+
+/* Header Styles */
+.about-header {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  background-color: #1a237e;
+  color: white;
+  text-align: center;
+}
+
+.about-title {
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+
+/* Navigation styles */
+.about-nav {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #e0e0e0;
+}
+
+.about-nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+.about-nav a:hover {
+  color: #1a237e;
+}
+
+/* Section Styles */
+.about-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.about-description {
+  font-size: 1.125rem;
+  color: #4b4b4b;
+}
+
+/* General container */
+.contact-container {
+  min-height: 100vh;
+  background-color: #fafafa;
+}
+
+/* Header Styles */
+.contact-header {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  background-color: #1a237e;
+  color: white;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+
+/* Navigation styles */
+.contact-nav {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #e0e0e0;
+}
+
+.contact-nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+.contact-nav a:hover {
+  color: #1a237e;
+}
+
+/* Form Section */
+.contact-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  max-width: 48rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Form styles */
+.contact-form {
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: bold;
+  color: #4b4b4b;
+  margin-bottom: 0.5rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  color: #4b4b4b;
+  box-sizing: border-box;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #009688;
+  box-shadow: 0 0 4px rgba(0, 150, 136, 0.4);
+}
+
+/* Button styles */
+.form-button {
+  background-color: #009688;
+  color: white;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.form-button:hover {
+  background-color: #00796b;
+}
+
+/* Map Section */
+.contact-map {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.contact-map p {
+  font-size: 1rem;
+  color: #4b4b4b;
+}
+
+/* General container */
+.services-container {
+  min-height: 100vh;
+  background-color: #fafafa;
+}
+
+/* Header Styles */
+.services-header {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  background-color: #1a237e;
+  color: white;
+  text-align: center;
+}
+
+.services-title {
+  font-size: 2.25rem;
+  font-weight: bold;
+}
+
+/* Navigation styles */
+.services-nav {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #e0e0e0;
+}
+
+.services-nav a {
+  text-decoration: none;
+  color: #000;
+}
+
+.services-nav a:hover {
+  color: #1a237e;
+}
+
+/* Services Section */
+.services-section {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Grid container for service cards */
+.services-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+}
+
+@media (min-width: 768px) {
+  .services-grid {
+      grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Service card styles */
+.service-card {
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  border-radius: 8px;
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #009688;
+  margin-bottom: 1rem;
+}
+
+.service-description {
+  color: #4b4b4b;
+  font-size: 1rem;
+}
+
+
+
+
